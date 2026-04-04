@@ -1,10 +1,15 @@
-type temperatureUnitType = "Celsius" | "Fahrenheit" | "Kelvin";
+const velidTypeUnit = ["Celsius", "Fahrenheit", "Kelvin"];
 
 export default function temperatureConverter(
-  FromUnit: temperatureUnitType,
-  ToUnit: temperatureUnitType,
+  FromUnit: string,
+  ToUnit: string,
   Value: number,
 ): number {
+  /* verification  */
+  if (!velidTypeUnit.includes(FromUnit) || !velidTypeUnit.includes(ToUnit)) {
+    throw new Error("unit error");
+  }
+
   if (FromUnit === ToUnit) {
     return Value;
   }
@@ -25,5 +30,5 @@ export default function temperatureConverter(
   if (FromUnit === "Kelvin" && ToUnit === "Fahrenheit")
     return ((Value - 273.15) * 9) / 5 + 32;
 
-  throw new Error("Invalid ToUnitemperatureToUnitype conversion");
+  throw new Error("Conversion not supported this units");
 }
