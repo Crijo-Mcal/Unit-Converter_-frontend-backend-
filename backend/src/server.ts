@@ -3,12 +3,15 @@ import dotenv from "dotenv";
 import temperatureConverter from "./Converter/temperature.ts";
 import lengthConverter from "./Converter/length.ts";
 import weightConverter from "./Converter/weight.ts";
-//import weightConverter from "./Converter/weigth.js";
+import cors from "cors";
+
 
 const app = express();
 dotenv.config();
 const PORT = process.env.PORT || 3000;
 console.log(process.env.PORT);
+
+app.use(cors());
 
 app.use("/:type/:fromUnit/:toUnit/:value", (req: any, res: any, next) => {
   const { type, fromUnit, toUnit, value } = req.params;

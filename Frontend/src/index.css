@@ -15,15 +15,11 @@
   --font-Roboto: "Roboto", "sans-serif";
 }
 
-/* :root {
+:root {
   font-family: Roboto;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+  width: auto;
+  height: auto;
+}
 
 .clip {
   position: relative;
