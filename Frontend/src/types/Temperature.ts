@@ -1,1 +1,0 @@
-export type temperatureUnitType = "Celsius" | "Fahrenheit" | "Kelvin";

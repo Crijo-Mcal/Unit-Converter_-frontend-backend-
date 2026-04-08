@@ -1,15 +1,18 @@
-
-export type { objResponse } from "../types/Api"
 const url: string = "http://localhost:3000";
 
 
-import type { objResponse } from "../types/Api";
-import type { temperatureUnitType } from "../types/Temperature";
+import type { objResponse, all_ConvertedType_avaliavle } from "../types/Api";
+import type { All_UnitType_avaliavle } from "../types/UnitType";
 
-export async function temperatureApicall(fromUnit: temperatureUnitType, toUnit: temperatureUnitType, value: number): Promise<objResponse> {
+export async function apicall(
+    typecoverted: all_ConvertedType_avaliavle,
+    fromUnit: All_UnitType_avaliavle,
+    toUnit: All_UnitType_avaliavle,
+    value: number
+): Promise<objResponse> {
 
     try {
-        const response = await fetch(`${url}/temperature/${fromUnit}/${toUnit}/${value}`);
+        const response = await fetch(`${url}/${typecoverted}/${fromUnit}/${toUnit}/${value}`);
         const data: objResponse = await response.json();
         return data;
     }
@@ -19,3 +22,5 @@ export async function temperatureApicall(fromUnit: temperatureUnitType, toUnit: 
     }
 
 }
+
+
