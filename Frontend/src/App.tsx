@@ -32,14 +32,14 @@ export default function App() {
           initial={{ x: -10 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.90, ease: "easeOut" }}
-          className="relative w-full lg:w-[900px] h-full h-auto  lg:h-[550px] py-10 lg:p-0  bg-amber-300  clip gap-y-6  flex  justify-center  items-center"
+          className="relative w-full lg:w-[900px] h-auto  lg:h-[550px] my-10 lg:p-0  bg-amber-300  clip gap-y-6  flex  justify-center  items-center bg-none"
           style={{
             backgroundImage: `url(${bg})`,
           }}>
-          <div className=" absolute w-full h-full bg-black opacity-78 "></div>
+          <div className=" absolute w-full h-full bg-black opacity-80 "></div>
           <div className="absolute w-full h-full bg-radial from-transparent  to-black  lg:hidden"></div>
 
-          <div className="z-10 my-10 lg:my-0 w-[80%] h-auto flex gap-6 flex-col lg:flex-row justify-between items-center ">
+          <div className="z-10  w-[80%] h-auto flex gap-6 flex-col lg:flex-row justify-between items-center ">
 
             {typeCoverted === "temperature" && <Form typeForms="temperature" setResult={setResult} />}
             {typeCoverted === "weight" && <Form typeForms="weight" setResult={setResult} />}
