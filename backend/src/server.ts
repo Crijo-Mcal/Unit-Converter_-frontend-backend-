@@ -1,15 +1,15 @@
 import express from "express";
 import dotenv from "dotenv";
-import temperatureConverter from "./Converter/temperature.ts";
-import lengthConverter from "./Converter/length.ts";
-import weightConverter from "./Converter/weight.ts";
+import temperatureConverter from "./Converter/temperature.js";
+import lengthConverter from "./Converter/length.js";
+import weightConverter from "./Converter/weight.js";
 import cors from "cors";
 
 
 const app = express();
 dotenv.config();
-const PORT = process.env.PORT || 3000;
-console.log(process.env.PORT);
+const PORT = process.env.PORT;
+
 
 app.use(cors());
 
@@ -80,5 +80,5 @@ app.get(`/:type/:fromUnit/:toUnit/:value`, (req: any, res: any) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Your server is running on port ${PORT}`);
+  console.log(`Your server is running`);
 });

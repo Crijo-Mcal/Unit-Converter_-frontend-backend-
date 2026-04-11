@@ -1,4 +1,4 @@
-const url: string = "http://localhost:3000";
+const url: string = import.meta.env.VITE_URL;
 
 
 import type { objResponse, all_ConvertedType_avaliavle } from "../types/Api";
