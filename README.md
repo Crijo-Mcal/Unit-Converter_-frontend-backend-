@@ -9,7 +9,7 @@ This project is built using a **frontend + backend architecture** with communica
 
 The frontend handles the user interface and user interactions, while the backend processes the conversion logic and sends the results back through the API.
 
-This project was inspired by the **Unit Converter project idea from roadmap.sh**. :contentReference[oaicite:0]{index=0}
+This project was inspired by the **Unit Converter project idea from roadmap.sh**. 
 
 **Inspired by:**  
 https://roadmap.sh/projects/unit-converter
